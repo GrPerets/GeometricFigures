@@ -1,4 +1,4 @@
-package com.grperets.geometricfigures;
+package com.grperets.geometricfigures.figure;
 
 public interface Figure {
     double area();
