@@ -33,6 +33,6 @@ public class RightTriangle extends GeometricFigureWithAngles {
 
     @Override
     public String toString(){
-        return String.format("Фигура: %s Площадь: %.2f кв.ед. Цвет: %s Гипотенуза: %.2f ед.",this.getFigureName(), area(), this.getFigureColor().name(), this.getHypotenuse());
+        return String.format("Фигура: %s Площадь: %.2f кв.ед. Гипотенуза: %.2f ед. Цвет: %s",this.getFigureName(), area(),  this.getHypotenuse(), this.getFigureColor().name());
     }
 }

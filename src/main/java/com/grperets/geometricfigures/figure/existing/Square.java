@@ -16,6 +16,6 @@ public class Square extends GeometricFigureWithAngles {
 
     @Override
     public String toString(){
-        return String.format("Фигура: %s Площадь: %.2f кв.ед. Цвет: %s Сторона: %.2f ед.",this.getFigureName(), area(), this.getFigureColor().name(), this.getSide());
+        return String.format("Фигура: %s Площадь: %.2f кв.ед. Сторона: %.2f ед. Цвет: %s",this.getFigureName(), area(), this.getSide(), this.getFigureColor().name());
     }
 }

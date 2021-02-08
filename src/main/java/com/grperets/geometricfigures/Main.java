@@ -18,9 +18,9 @@ public class Main {
         System.out.print("Number of Figures?: ");
 
         Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
+        int numberOfFigures = scanner.nextInt();
 
-        List<Figure> figures = ManagerFigureFactory.getFigures(n);
+        List<Figure> figures = ManagerFigureFactory.getFigures(numberOfFigures);
 
         for(Figure figure: figures){
             System.out.printf("%s\n", figure);

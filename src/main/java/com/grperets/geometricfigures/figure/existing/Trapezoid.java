@@ -43,6 +43,6 @@ public class Trapezoid extends GeometricFigureWithAngles {
 
     @Override
     public String toString(){
-        return String.format("Фигура %s Площадь: %.2f кв.ед. Цвет: %s Средняя линия: %.2f ед.",this.getFigureName(), area(), this.getFigureColor().name(), this.getMiddleLine());
+        return String.format("Фигура %s Площадь: %.2f кв.ед. Средняя линия: %.2f ед. Цвет: %s ",this.getFigureName(), area(), this.getMiddleLine(), this.getFigureColor().name());
     }
 }

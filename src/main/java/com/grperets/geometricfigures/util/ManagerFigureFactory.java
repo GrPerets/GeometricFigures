@@ -57,7 +57,7 @@ public class ManagerFigureFactory {
         int limitParameters = 2;
 
         List<Figure> figures  = new ArrayList<>();
-        for(int i = 0; i < numberOfFigures;i++){
+        for(int i = 0; i < numberOfFigures; i++){
 
             String figureName = null;
             FigureColor figureColor = null;

@@ -15,17 +15,13 @@ public class Circle extends GeometricFigureWithoutAngles {
 
     }
 
-    public double getRadius(){
-        return super.getRadius();
-    }
-
     public double getCircumference(){
         return Math.PI * this.getRadius() * 2;
     }
 
     @Override
     public String toString(){
-        return String.format("Фигура: %s Площадь: %.2f кв.ед. Цвет: %s Длина окружности: %.2f ед.", this.getFigureName(), area(), this.getFigureColor().name(), this.getCircumference());
+        return String.format("Фигура: %s Площадь: %.2f кв.ед. Длина окружности: %.2f ед. Цвет: %s", this.getFigureName(), area(),  this.getCircumference(), this.getFigureColor().name());
     }
 
 }
