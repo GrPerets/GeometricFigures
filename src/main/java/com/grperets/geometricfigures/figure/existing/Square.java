@@ -5,8 +5,8 @@ import com.grperets.geometricfigures.util.FigureColor;
 
 public class Square extends GeometricFigureWithAngles {
 
-    public Square(FigureColor figureColor, double side) {
-        super(figureColor, side);
+    public Square(String figureName, FigureColor figureColor, double side) {
+        super(figureName, figureColor, side);
     }
 
     @Override
@@ -16,6 +16,6 @@ public class Square extends GeometricFigureWithAngles {
 
     @Override
     public String toString(){
-        return String.format("Площадь: %.2f Цвет: %s Сторона: %.2f",area(), this.getFigureColor().name(), this.getSide());
+        return String.format("Фигура: %s Площадь: %.2f кв.ед. Цвет: %s Сторона: %.2f ед.",this.getFigureName(), area(), this.getFigureColor().name(), this.getSide());
     }
 }

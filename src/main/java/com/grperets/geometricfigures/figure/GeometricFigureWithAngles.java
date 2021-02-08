@@ -6,12 +6,12 @@ public abstract class GeometricFigureWithAngles extends GeometricFigure {
 
     private double side;
 
-    public GeometricFigureWithAngles(FigureColor figureColor) {
-        super(figureColor);
+    public GeometricFigureWithAngles(String figureName, FigureColor figureColor) {
+        super(figureName, figureColor);
     }
 
-    public GeometricFigureWithAngles(FigureColor figureColor, double side) {
-        super(figureColor);
+    public GeometricFigureWithAngles(String figureName, FigureColor figureColor, double side) {
+        super(figureName, figureColor);
         this.side = side;
     }
 

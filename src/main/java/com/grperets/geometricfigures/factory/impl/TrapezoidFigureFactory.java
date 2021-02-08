@@ -6,8 +6,9 @@ import com.grperets.geometricfigures.figure.existing.Trapezoid;
 import com.grperets.geometricfigures.util.FigureColor;
 
 public class TrapezoidFigureFactory implements FigureFactory {
+
     @Override
-    public Figure create() {
-        return new Trapezoid(FigureColor.Green, 18, 9.6, 5);
+    public Figure create(String figureName,FigureColor figureColor, double ... var) {
+        return new Trapezoid(figureName, figureColor, var[0], var[1], var[2]);
     }
 }

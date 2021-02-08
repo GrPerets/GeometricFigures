@@ -5,15 +5,26 @@ import com.grperets.geometricfigures.factory.impl.CircleFigureFactory;
 import com.grperets.geometricfigures.figure.existing.Circle;
 import com.grperets.geometricfigures.figure.Figure;
 import com.grperets.geometricfigures.figure.existing.Trapezoid;
+import com.grperets.geometricfigures.util.FigureColor;
+import com.grperets.geometricfigures.util.ManagerFigureFactory;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String []args ){
-        FigureFactory figureFactory = new CircleFigureFactory();
-        Figure figure = figureFactory.create();
 
-        System.out.println(figure);
+        System.out.print("Number of Figures?: ");
 
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
 
+        List<Figure> figures = ManagerFigureFactory.getFigures(n);
+
+        for(Figure figure: figures){
+            System.out.printf("%s\n", figure);
+        }
 
     }
 }

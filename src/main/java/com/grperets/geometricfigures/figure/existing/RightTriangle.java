@@ -7,8 +7,8 @@ public class RightTriangle extends GeometricFigureWithAngles {
 
     private double cathetusB;
 
-    public RightTriangle(FigureColor figureColor, double side, double cathetusB) {
-        super(figureColor, side);
+    public RightTriangle(String figureName, FigureColor figureColor, double side, double cathetusB) {
+        super(figureName, figureColor, side);
         this.cathetusB = cathetusB;
     }
 
@@ -33,6 +33,6 @@ public class RightTriangle extends GeometricFigureWithAngles {
 
     @Override
     public String toString(){
-        return String.format("Площадь: %.2f Цвет: %s Гипотенуза: %.2f",area(), this.getFigureColor().name(), this.getHypotenuse());
+        return String.format("Фигура: %s Площадь: %.2f кв.ед. Цвет: %s Гипотенуза: %.2f ед.",this.getFigureName(), area(), this.getFigureColor().name(), this.getHypotenuse());
     }
 }

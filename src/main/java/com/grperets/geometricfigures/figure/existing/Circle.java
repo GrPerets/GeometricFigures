@@ -5,8 +5,8 @@ import com.grperets.geometricfigures.util.FigureColor;
 
 public class Circle extends GeometricFigureWithoutAngles {
 
-    public Circle(FigureColor figureColor, double radius) {
-        super(figureColor, radius);
+    public Circle(String figureName, FigureColor figureColor, double radius) {
+        super(figureName, figureColor, radius);
     }
 
     @Override
@@ -19,9 +19,13 @@ public class Circle extends GeometricFigureWithoutAngles {
         return super.getRadius();
     }
 
+    public double getCircumference(){
+        return Math.PI * this.getRadius() * 2;
+    }
+
     @Override
     public String toString(){
-        return String.format("Площадь: %.2f Цвет: %s Радиус: %.2f",area(), this.getFigureColor().name(), this.getRadius());
+        return String.format("Фигура: %s Площадь: %.2f кв.ед. Цвет: %s Длина окружности: %.2f ед.", this.getFigureName(), area(), this.getFigureColor().name(), this.getCircumference());
     }
 
 }

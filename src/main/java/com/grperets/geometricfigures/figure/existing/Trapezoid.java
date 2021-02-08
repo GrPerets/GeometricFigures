@@ -7,8 +7,8 @@ public class Trapezoid extends GeometricFigureWithAngles {
     private double baseB;
     private double height;
 
-    public Trapezoid(FigureColor figureColor, double side, double baseB, double height) {
-        super(figureColor, side);
+    public Trapezoid(String figureName, FigureColor figureColor, double side, double baseB, double height) {
+        super(figureName, figureColor, side);
         this.baseB = baseB;
         this.height = height;
     }
@@ -36,8 +36,13 @@ public class Trapezoid extends GeometricFigureWithAngles {
         this.height = height;
     }
 
+    public double getMiddleLine(){
+        return ((this.getSide() + this.getBaseB()) / 2);
+    }
+
+
     @Override
     public String toString(){
-        return String.format("Площадь: %.2f Цвет: %s Высота: %.2f",area(), this.getFigureColor().name(), this.height);
+        return String.format("Фигура %s Площадь: %.2f кв.ед. Цвет: %s Средняя линия: %.2f ед.",this.getFigureName(), area(), this.getFigureColor().name(), this.getMiddleLine());
     }
 }

@@ -5,9 +5,11 @@ import com.grperets.geometricfigures.util.FigureColor;
 
 public abstract class GeometricFigure implements Figure {
 
+    private String figureName;
     private FigureColor figureColor;
 
-    public GeometricFigure(FigureColor figureColor) {
+    public GeometricFigure(String figureName, FigureColor figureColor) {
+        this.figureName = figureName;
         this.figureColor = figureColor;
     }
 
@@ -19,6 +21,11 @@ public abstract class GeometricFigure implements Figure {
         this.figureColor = figureColor;
     }
 
+    public String getFigureName() {
+        return figureName;
+    }
 
-
+    public void setFigureName(String figureName) {
+        this.figureName = figureName;
+    }
 }

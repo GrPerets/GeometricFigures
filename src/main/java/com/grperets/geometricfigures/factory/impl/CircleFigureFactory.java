@@ -6,8 +6,9 @@ import com.grperets.geometricfigures.figure.existing.Circle;
 import com.grperets.geometricfigures.util.FigureColor;
 
 public class CircleFigureFactory implements FigureFactory {
+
     @Override
-    public Figure create() {
-        return new Circle(FigureColor.Blue, 50);
+    public Figure create(String figureName, FigureColor figureColor, double ... var) {
+        return new Circle(figureName, figureColor, var[0]);
     }
 }

@@ -6,12 +6,12 @@ public abstract class GeometricFigureWithoutAngles extends GeometricFigure {
 
     private double radius;
 
-    public GeometricFigureWithoutAngles(FigureColor figureColor) {
-        super(figureColor);
+    public GeometricFigureWithoutAngles(String figureName, FigureColor figureColor) {
+        super(figureName, figureColor);
     }
 
-    public GeometricFigureWithoutAngles(FigureColor figureColor, double radius) {
-        super(figureColor);
+    public GeometricFigureWithoutAngles(String figureName, FigureColor figureColor, double radius) {
+        super(figureName, figureColor);
         this.radius = radius;
     }
 
