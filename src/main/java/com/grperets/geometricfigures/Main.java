@@ -8,6 +8,7 @@ import com.grperets.geometricfigures.figure.existing.Trapezoid;
 import com.grperets.geometricfigures.util.FigureColor;
 import com.grperets.geometricfigures.util.ManagerFigureFactory;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -16,9 +17,16 @@ public class Main {
     public static void main(String []args ){
 
         System.out.print("Number of Figures?: ");
+        int numberOfFigures = 0;
 
-        Scanner scanner = new Scanner(System.in);
-        int numberOfFigures = scanner.nextInt();
+
+        try(Scanner scanner = new Scanner(System.in);){
+            numberOfFigures = scanner.nextInt();
+        }
+        catch (Exception ex){
+            System.out.println(ex);
+        }
+
 
         List<Figure> figures = ManagerFigureFactory.getFigures(numberOfFigures);
 
