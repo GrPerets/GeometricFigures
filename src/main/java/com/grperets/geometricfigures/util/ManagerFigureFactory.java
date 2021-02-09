@@ -16,37 +16,29 @@ public class ManagerFigureFactory {
     /**
      *
      * @param figureName
-     * @param figureColor
-     * @param var parameters' figures
      * @return
      */
-    public static Figure createFigureByOptional(String figureName, FigureColor figureColor, double ... var){
-        FigureFactory figureFactory = null;
+    public static FigureFactory createFigureFactoryByOptional(String figureName){
         switch (figureName){
             case "circle":
-                figureFactory = new CircleFigureFactory();
-                break;
+                return new CircleFigureFactory();
 
             case "rightTriangle":
-                figureFactory = new RightTriangleFigureFactory();
-                break;
+                return new RightTriangleFigureFactory();
 
             case "square":
-                figureFactory = new SquareFigureFactory();
-                break;
+                return new SquareFigureFactory();
 
             case "trapezoid":
-                figureFactory =  new TrapezoidFigureFactory();
-                break;
+                return new TrapezoidFigureFactory();
 
             default:
                 throw new RuntimeException(figureName + " Not found");
         }
 
-        Figure figure = figureFactory.create(figureName, figureColor, var);
-        return figure;
 
     }
+
 
     /**
      *
@@ -99,7 +91,7 @@ public class ManagerFigureFactory {
                 default: throw new RuntimeException(figureName + " Not found");
 
             }
-            figures.add(createFigureByOptional(figureName, figureColor, var));
+            figures.add(createFigureFactoryByOptional(figureName).create(figureName, figureColor, var));
         }
         return figures;
     }
