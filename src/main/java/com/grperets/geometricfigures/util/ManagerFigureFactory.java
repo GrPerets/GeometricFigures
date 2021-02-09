@@ -52,6 +52,7 @@ public class ManagerFigureFactory {
         for(int i = 0; i < numberOfFigures; i++){
 
             String figureName = null;
+            String figureNameRU = null;
             FigureColor figureColor = null;
             double [] var = new double[5];
             Random random = new Random();
@@ -63,12 +64,14 @@ public class ManagerFigureFactory {
             switch (randomFigureNumber){
                 case 0: {
                     figureName = "circle";
+                    figureNameRU = "Круг";
                     figureColor = getRandomColor();
                     var[0] = randomFigureParameter;
                 }
                 break;
                 case 1: {
                     figureName = "rightTriangle";
+                    figureNameRU = "Треугольник";
                     figureColor = getRandomColor();
                     var[0] = randomFigureParameter;
                     var[1] = randomFigureParameter;
@@ -76,12 +79,14 @@ public class ManagerFigureFactory {
                 break;
                 case 2: {
                     figureName = "square";
+                    figureNameRU = "Квадрат";
                     figureColor = getRandomColor();
                     var[0] = randomFigureParameter;
                 }
                 break;
                 case 3: {
                     figureName = "trapezoid";
+                    figureNameRU = "Трапеция";
                     figureColor = getRandomColor();
                     var[0] = randomFigureParameter;
                     var[1] = randomFigureParameter;
@@ -91,7 +96,7 @@ public class ManagerFigureFactory {
                 default: throw new RuntimeException(figureName + " Not found");
 
             }
-            figures.add(createFigureFactoryByOptional(figureName).create(figureName, figureColor, var));
+            figures.add(createFigureFactoryByOptional(figureName).create(figureNameRU, figureColor, var));
         }
         return figures;
     }
